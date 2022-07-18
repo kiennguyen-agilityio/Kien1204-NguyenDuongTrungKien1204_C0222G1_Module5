@@ -1,0 +1,10 @@
+<h2>Color Piker</h2>
+<label>
+  Chọn màu:
+  <input type="color" [(ngModel)]= "background" >
+  <br>
+  <label>Output</label>
+  <br>
+  <div style="width: 200px; height: 100px" [style.background]="background">
+  </div>
+</label>
