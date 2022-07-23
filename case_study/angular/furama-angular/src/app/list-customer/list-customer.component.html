@@ -13,118 +13,20 @@
     <th scope="col">Chỉnh sửa</th>
     <th scope="col">Xóa</th>
   </tr>
+  <tr *ngFor="let customers of customers; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{customers.id}}</td>
+    <td>{{customers.typeCustomer}}</td>
+    <td>{{customers.name}}</td>
+    <td>{{customers.gender}}</td>
+    <td>{{customers.phone }}</td>
+    <td>{{customers.email }}</td>
+    <td>{{customers.address }}</td>
+    <td><a [routerLink]="['/product/edit',customers.id]"> Edit</a></td>
+    <td><a [routerLink]="['/product/delete',customers.id]"> Delete</a></td>
+  </tr>
   </thead>
-  <tbody id="customerList">
-  <tr>
-    <td> 1</td>
-    <td> Vip</td>
-    <td> Nguyễn Văn A</td>
-    <td>12/04/1999</td>
-    <td> Nam </td>
-    <td> 123456789</td>
-    <td>09082124271</td>
-    <td>nguyenvana@gmail.com</td>
-    <td> Đà Nẵng</td>
-    <td>
-
-      <a type="button" class="btn btn-primary editCustomer" data-toggle="modal">
-        Chỉnh sửa
-      </a>
-    </td>
-    <td>
-      <a type="button" class="btn btn-primary deleteCustomer" data-toggle="modal"  data-target="#exampleModal">
-        Xóa
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 1</td>
-    <td> Vip</td>
-    <td> Nguyễn Văn A</td>
-    <td>12/04/1999</td>
-    <td> Nam </td>
-    <td> 123456789</td>
-    <td>09082124271</td>
-    <td>nguyenvana@gmail.com</td>
-    <td> Đà Nẵng</td>
-    <td>
-
-      <a type="button" class="btn btn-primary editCustomer" data-toggle="modal">
-        Chỉnh sửa
-      </a>
-    </td>
-    <td>
-      <a type="button" class="btn btn-primary deleteCustomer" data-toggle="modal"  data-target="#exampleModal">
-        Xóa
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 1</td>
-    <td> Vip</td>
-    <td> Nguyễn Văn A</td>
-    <td>12/04/1999</td>
-    <td> Nam </td>
-    <td> 123456789</td>
-    <td>09082124271</td>
-    <td>nguyenvana@gmail.com</td>
-    <td> Đà Nẵng</td>
-    <td>
-
-      <a type="button" class="btn btn-primary editCustomer" data-toggle="modal">
-        Chỉnh sửa
-      </a>
-    </td>
-    <td>
-      <a type="button" class="btn btn-primary deleteCustomer" data-toggle="modal"  data-target="#exampleModal">
-        Xóa
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 1</td>
-    <td> Vip</td>
-    <td> Nguyễn Văn A</td>
-    <td>12/04/1999</td>
-    <td> Nam </td>
-    <td> 123456789</td>
-    <td>09082124271</td>
-    <td>nguyenvana@gmail.com</td>
-    <td> Đà Nẵng</td>
-    <td>
-
-      <a type="button" class="btn btn-primary editCustomer" data-toggle="modal">
-        Chỉnh sửa
-      </a>
-    </td>
-    <td>
-      <a type="button" class="btn btn-primary deleteCustomer" data-toggle="modal"  data-target="#exampleModal">
-        Xóa
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td> 1</td>
-    <td> Vip</td>
-    <td> Nguyễn Văn A</td>
-    <td>12/04/1999</td>
-    <td> Nam </td>
-    <td> 123456789</td>
-    <td>09082124271</td>
-    <td>nguyenvana@gmail.com</td>
-    <td> Đà Nẵng</td>
-    <td>
-
-      <a type="button" class="btn btn-primary editCustomer" data-toggle="modal">
-        Chỉnh sửa
-      </a>
-    </td>
-    <td>
-      <a type="button" class="btn btn-primary deleteCustomer" data-toggle="modal"  data-target="#exampleModal">
-        Xóa
-      </a>
-    </td>
-  </tr>
+  <tbody>
 
   </tbody>
 </table>
