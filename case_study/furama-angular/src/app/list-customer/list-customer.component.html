@@ -1,0 +1,53 @@
+<table class="table table-bordered">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Mã khách hàng</th>
+    <th scope="col">Hạng khách</th>
+    <th scope="col">Họ tên</th>
+    <th scope="col">Ngày sinh</th>
+    <th scope="col">Giới tính</th>
+    <th scope="col">CCCD</th>
+    <th scope="col">Số điện thoại</th>
+    <th scope="col">Email</th>
+    <th scope="col">Địa chỉ</th>
+    <th scope="col">Chỉnh sửa</th>
+    <th scope="col">Xóa</th>
+  </tr>
+  <tr *ngFor="let customer of customerList; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{customer.id}}</td>
+    <td>{{customer.typeCustomer.name}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.birthday}}</td>
+    <td>{{customer.phone }}</td>
+    <td>{{customer.email }}</td>
+    <td>{{customer.address }}</td>
+    <td><a [routerLink]="['/product/edit',customer.id]"> Edit</a></td>
+    <td><a [routerLink]="['/product/delete',customer.id]"> Delete</a></td>
+  </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Delete Service</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Do you want delete this Customer ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"> Delete </button>
+      </div>
+    </div>
+  </div>
+</div>
+

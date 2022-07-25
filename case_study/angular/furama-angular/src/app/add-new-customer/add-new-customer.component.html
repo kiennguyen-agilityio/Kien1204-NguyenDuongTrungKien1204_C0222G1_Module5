@@ -1,63 +1,145 @@
-
 <div class="container">
-  <form>
+  <form [formGroup]="addNewCustomer" novalidate>
     <h1 class="justify-content-center"> Form Create </h1>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Customer Code</label>
-        <input type="email" class="form-control" placeholder="SV-1234">
+        <input type="text" class="form-control" placeholder="SV-1234" formControlName="id">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.id.hasError('required')
+        && (addNewCustomer.controls.id.dirty || addNewCustomer.controls.id.touched)">
+            không được để trống
+          </div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.id.hasError('pattern')
+        && (addNewCustomer.controls.id.dirty || addNewCustomer.controls.id.touched)">
+            sai định dạng
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label>Type Of Customer</label><br>
         <select class="form-select form-select-lg mb-3 form form-control"
-                aria-label=".form-select-lg example">
+                aria-label=".form-select-lg example" formControlName="typeCustomer">
           <option selected>Choose one</option>
           <option value="1">Normal</option>
           <option value="2">Vip</option>
           <option value="3">Super Vip</option>
         </select>
+        <div>
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.typeCustomer.hasError('required')
+        && (addNewCustomer.controls.typeCustomer.dirty || addNewCustomer.controls.typeCustomer.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Customer Name</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="Nguyen Van A" formControlName="name">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.name.hasError('required')
+        && (addNewCustomer.controls.name.dirty || addNewCustomer.controls.name.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>BirthDay</label>
-        <input type="date" class="form-control" placeholder="">
+        <input type="date" class="form-control" placeholder="DD/MM//YYyy" formControlName="birthday">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.typeCustomer.hasError('required')
+        && (addNewCustomer.controls.birthday.dirty || addNewCustomer.controls.birthday.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
 
       <div class="form-group col-md-4">
         <label> Gender </label>
         <select class="form-select form-select-lg mb-3 form form-control"
-                aria-label=".form-select-lg example">
+                aria-label=".form-select-lg example" formControlName="gender">
           <option selected> Choose one</option>
           <option value="1">Male</option>
           <option value="2">Female</option>
           <option value="3">Another</option>
         </select>
+        <div>
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.gender.hasError('required')
+        && (addNewCustomer.controls.gender.dirty || addNewCustomer.controls.gender.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
-
       <div class="form-group col-md-4">
         <label>Id Card</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="123456789" formControlName="idCard">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.idCard.hasError('required')
+        && (addNewCustomer.controls.idCard.dirty || addNewCustomer.controls.idCard.touched)">
+            không được để trống
+          </div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.idCard.hasError('pattern')
+        && (addNewCustomer.controls.idCard.dirty || addNewCustomer.controls.idCard.touched)">
+            sai định dạng
+          </div>
+        </div>
       </div>
     </div>
+
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label> Phone Number </label>
-        <input type="email" class="form-control" placeholder="090-1234567">
+        <input type="email" class="form-control" placeholder="090-1234567" formControlName="phone">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.phone.hasError('required')
+        && (addNewCustomer.controls.phone.dirty || addNewCustomer.controls.phone.touched)">
+            không được để trống
+          </div>
+
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.phone.hasError('pattern')
+        && (addNewCustomer.controls.phone.dirty || addNewCustomer.controls.phone.touched)">
+            sai định dạng
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label> Email</label>
-        <input type="text" class="form-control" placeholder="abc@gmail.com">
+        <input type="text" class="form-control" placeholder="abc@gmail.com" formControlName="email">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.phone.hasError('required')
+        && (addNewCustomer.controls.phone.dirty || addNewCustomer.controls.phone.touched)">
+            không được để trống
+          </div>
+
+          <div
+            *ngIf="!addNewCustomer.controls.email?.valid && (addNewCustomer.controls.email?.dirty || addNewCustomer.controls.email?.touched)">
+            <p style="color: red"> Email is not valid</p>
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label> Address </label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="abc" formControlName="address">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="addNewCustomer.controls.address.hasError('required')
+        && (addNewCustomer.controls.address.dirty || addNewCustomer.controls.address.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary"> Create </button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="addNewCustomer"> Create</button>
   </form>
 </div>

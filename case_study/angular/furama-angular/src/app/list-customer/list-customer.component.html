@@ -13,17 +13,17 @@
     <th scope="col">Chỉnh sửa</th>
     <th scope="col">Xóa</th>
   </tr>
-  <tr *ngFor="let customers of customers; index as i">
+  <tr *ngFor="let customer of customers; index as i">
     <td>{{i + 1}}</td>
-    <td>{{customers.id}}</td>
-    <td>{{customers.typeCustomer}}</td>
-    <td>{{customers.name}}</td>
-    <td>{{customers.gender}}</td>
-    <td>{{customers.phone }}</td>
-    <td>{{customers.email }}</td>
-    <td>{{customers.address }}</td>
-    <td><a [routerLink]="['/product/edit',customers.id]"> Edit</a></td>
-    <td><a [routerLink]="['/product/delete',customers.id]"> Delete</a></td>
+    <td>{{customer.id}}</td>
+    <td>{{customer.typeCustomer}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.gender}}</td>
+    <td>{{customer.phone }}</td>
+    <td>{{customer.email }}</td>
+    <td>{{customer.address }}</td>
+    <td><a [routerLink]="['/product/edit',customer.id]"> Edit</a></td>
+    <td><a [routerLink]="['/product/delete',customer.id]"> Delete</a></td>
   </tr>
   </thead>
   <tbody>

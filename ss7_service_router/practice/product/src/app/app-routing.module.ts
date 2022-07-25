@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
+import {ProductListComponent} from './product/product-list/product-list.component';
+import {ProductEditComponent} from './product/product-edit/product-edit.component';
+import {ProductAddNewComponent} from './product/product-add-new/product-add-new.component';
 
-
-const routes: Routes = [
+const routes: Routes = [{
+  path: '',
+  component: ProductListComponent
+},
   {
-    path: 'product',
-    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
+    path: 'product/edit/:id',
+    component: ProductEditComponent
   },
   {
-    path: 'category',
-    loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
-  }
-];
+    path: 'product/delete:id',
+    component: ProductListComponent
+  },
+  {
+    path: 'product/create',
+    component: ProductAddNewComponent
+  }];
+
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes)],

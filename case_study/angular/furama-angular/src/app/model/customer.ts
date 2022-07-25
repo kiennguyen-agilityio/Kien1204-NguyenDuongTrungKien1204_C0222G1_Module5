@@ -1,5 +1,6 @@
 export interface Customer {
    id: string;
+   code: string;
    typeCustomer: string;
    name: string;
    gender: string;

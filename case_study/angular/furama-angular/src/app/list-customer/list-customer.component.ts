@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from '../model/customer';
 import {CustomerService} from '../service/customer.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-list-customer',
@@ -8,8 +9,7 @@ import {CustomerService} from '../service/customer.service';
   styleUrls: ['./list-customer.component.css']
 })
 export class ListCustomerComponent implements OnInit {
-  customers: Customer[] = [];
-
+  private customers: Customer[];
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
@@ -17,6 +17,7 @@ export class ListCustomerComponent implements OnInit {
   }
 
    getAll() {
-    this.customers = this.customerService.getAll();
+    // @ts-ignore
+     this.customers = this.customerService.getAll();
   }
 }

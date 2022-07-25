@@ -1,0 +1,113 @@
+{
+  "customerList": [
+    {
+      "id": "1",
+      "code": "KH-1234",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Vip"
+      },
+      "name": "nguyen van a",
+      "gender": "nam",
+      "birthday": "1999-12-04",
+      "idCard": 123456,
+      "phone": 456789,
+      "email": "nguyenvana@gmail.com",
+      "address": "da nang"
+    },
+    {
+      "id": "2",
+      "code": "KH-1234",
+      "typeCustomer": {
+        "id": 1
+      },
+      "name": "nguyen van a",
+      "gender": "nam",
+      "birthday": "1999-12-04",
+      "idCard": 123456,
+      "phone": 456789,
+      "email": "nguyenvana@gmail.com",
+      "address": "da nang"
+    },
+    {
+      "id": "3",
+      "code": "KH-1234",
+      "typeCustomer": {
+        "id": 2
+      },
+      "name": "nguyen van a",
+      "gender": "nam",
+      "birthday": "1999-12-04",
+      "idCard": 123456,
+      "phone": 456789,
+      "email": "nguyenvana@gmail.com",
+      "address": "da nang"
+    },
+    {
+      "code": "KH-1234",
+      "name": "Nguyen Van B",
+      "gender": "2",
+      "birthday": "2022-07-07",
+      "idCard": "123124124",
+      "phone": "0905132321",
+      "email": "Nguyenvbb@gmail.com",
+      "address": "da nang",
+      "typeCustomer": {
+        "id": 1
+      }
+    },
+    {
+      "code": "KH-1235",
+      "name": "Nguyen Duong",
+      "gender": "1",
+      "birthday": "2022-07-24",
+      "idCard": "123214121",
+      "phone": "09012341221",
+      "email": "nngnn@gmail.com",
+      "address": "quang nam",
+      "typeCustomer":{
+        "id": 1
+      }
+    },
+    {
+      "code": "KH-9809",
+      "name": "ksksks",
+      "gender": "1",
+      "birthday": "2022-07-10",
+      "idCard": "21123123123",
+      "phone": "0902123141",
+      "email": "zzzz@gmail.com",
+      "address": "quang tri",
+      "typeCustomer": {
+        "id": 2
+      }
+    },
+    {
+      "code": "KH-9182",
+      "name": "SasaS",
+      "gender": "2",
+      "birthday": "2022-07-14",
+      "idCard": "1321312313",
+      "phone": "0901234567",
+      "email": "dasda@gm",
+      "address": "sadads",
+      "typeCustomer": {
+        "id": 3
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "vip"
+    },
+    {
+      "id": 2,
+      "name": "normal"
+    },
+    {
+      "id": 3,
+      "name": "super vip"
+    }
+  ]
+}

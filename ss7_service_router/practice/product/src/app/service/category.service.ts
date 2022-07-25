@@ -1,47 +1,21 @@
 import {Injectable} from '@angular/core';
 import {Category} from '../model/category';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
-  categories: Category[] = [{
-    id: 1,
-    name: 'IPhone'
-  }, {
-    id: 2,
-    name: 'Samsung',
-  }, {
-    id: 3,
-    name: 'LG',
-  }];
-
-  constructor() {
+  private API_URL = 'http://localhost:3000/categories';
+  constructor(private http: HttpClient) {
   }
 
-  getAll() {
-    return this.categories;
+  getAll(): Observable<Category[]> {
+    return this.http.get<Category[]>(this.API_URL );
   }
 
-  saveCategory(category: any) {
-    this.categories.push(category);
-  }
-
-  findById(id: number) {
-    return this.categories.find(category => category.id === id);
-  }
-
-  updateCategory(id: number, category: Category) {
-    for (let i = 0; i < this.categories.length; i++) {
-      if (this.categories[i].id === id) {
-        this.categories[i] = category;
-      }
-    }
-  }
-
-  deleteCategory(id: number) {
-    this.categories = this.categories.filter(category => {
-      return category.id !== id;
-    });
+  findById(id: number): Observable<Category> {
+    return this.http.get<Category>(this.API_URL + '/' + id);
   }
 }

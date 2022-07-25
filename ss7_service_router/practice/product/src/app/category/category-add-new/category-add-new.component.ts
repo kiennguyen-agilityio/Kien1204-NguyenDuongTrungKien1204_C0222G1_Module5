@@ -8,20 +8,9 @@ import {CategoryService} from '../../service/category.service';
   styleUrls: ['./category-add-new.component.css']
 })
 export class CategoryAddNewComponent implements OnInit {
-  categoryForm: FormGroup = new FormGroup({
-    id: new FormControl(),
-    name: new FormControl(),
-  });
-
-  constructor(private categoryService: CategoryService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  submit() {
-    const category = this.categoryForm.value;
-    this.categoryService.saveCategory(category);
-    this.categoryForm.reset();
   }
 }
