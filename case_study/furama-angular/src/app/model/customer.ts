@@ -1,6 +1,6 @@
 import {CustomerType} from './customer-type';
 export interface Customer {
-   id: string;
+   id: number;
    code: string;
    typeCustomer: CustomerType;
    name: string;

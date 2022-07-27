@@ -1,98 +1,96 @@
 {
   "customerList": [
     {
-      "id": "1",
+      "code": "KH-1232",
+      "name": "assaa",
+      "gender": "1",
+      "birthday": "2022-07-08",
+      "idCard": "1231231212",
+      "phone": "09012312313",
+      "email": "hdhd@gm",
+      "address": "da nang",
+      "typeCustomer": 2,
+      "id": 11
+    },
+    {
+      "id": 12,
       "code": "KH-1234",
+      "name": "Nguyen A",
+      "gender": "1",
+      "birthday": "2022-07-08",
+      "idCard": "221312312",
+      "phone": "09012321312",
+      "email": "sa@g",
+      "address": "asaaa",
+      "typeCustomer": 3
+    },
+    {
+      "id": 13,
+      "code": "KH-1244",
+      "name": "aasaa",
+      "gender": "2",
+      "birthday": "2022-07-20",
+      "idCard": "213131232131",
+      "phone": "0901231313",
+      "email": "asa@g",
+      "address": "aaaaaa",
+      "typeCustomer": 3
+    },
+    {
+      "id": 14,
+      "code": "KH-1234",
+      "name": "Duong Trung Kien",
+      "gender": "1",
+      "birthday": "2022-07-08",
+      "idCard": "09092099292",
+      "phone": "09009999999",
+      "email": "aaa@gmail",
+      "address": "asadasd",
+      "typeCustomer": 2
+    },
+    {
+      "id": 15,
+      "code": "KH-1234",
+      "name": "asaassaa",
+      "gender": "1",
+      "birthday": "2022-07-02",
+      "idCard": "2131232131",
+      "phone": "0901213123",
+      "email": "aa@h",
+      "address": "asaaa",
+      "typeCustomer": {
+        "id": 3,
+        "name": "super vip"
+      }
+    },
+    {
+      "id": 16,
+      "code": "KH-1231",
+      "name": "Kien Ne",
+      "gender": "1",
+      "birthday": "2022-07-09",
+      "idCard": "2131232131",
+      "phone": "090123131231",
+      "email": "baba@gamiks",
+      "address": "00000000",
       "typeCustomer": {
         "id": 1,
-        "name": "Vip"
-      },
-      "name": "nguyen van a",
-      "gender": "nam",
-      "birthday": "1999-12-04",
-      "idCard": 123456,
-      "phone": 456789,
-      "email": "nguyenvana@gmail.com",
-      "address": "da nang"
+        "name": "vip"
+      }
     },
     {
-      "id": "2",
+      "id": 17,
       "code": "KH-1234",
-      "typeCustomer": {
-        "id": 1
-      },
-      "name": "nguyen van a",
-      "gender": "nam",
-      "birthday": "1999-12-04",
-      "idCard": 123456,
-      "phone": 456789,
-      "email": "nguyenvana@gmail.com",
-      "address": "da nang"
-    },
-    {
-      "id": "3",
-      "code": "KH-1234",
-      "typeCustomer": {
-        "id": 2
-      },
-      "name": "nguyen van a",
-      "gender": "nam",
-      "birthday": "1999-12-04",
-      "idCard": 123456,
-      "phone": 456789,
-      "email": "nguyenvana@gmail.com",
-      "address": "da nang"
-    },
-    {
-      "code": "KH-1234",
-      "name": "Nguyen Van B",
+      "name": "Nguyen aaaaaaa",
       "gender": "2",
-      "birthday": "2022-07-07",
-      "idCard": "123124124",
-      "phone": "0905132321",
-      "email": "Nguyenvbb@gmail.com",
-      "address": "da nang",
+      "birthday": "2022-07-02",
+      "idCard": "2121312121",
+      "phone": "09012321312",
+      "email": "avc@gmail",
+      "address": "acv",
       "typeCustomer": {
-        "id": 1
-      }
-    },
-    {
-      "code": "KH-1235",
-      "name": "Nguyen Duong",
-      "gender": "1",
-      "birthday": "2022-07-24",
-      "idCard": "123214121",
-      "phone": "09012341221",
-      "email": "nngnn@gmail.com",
-      "address": "quang nam",
-      "typeCustomer":{
-        "id": 1
-      }
-    },
-    {
-      "code": "KH-9809",
-      "name": "ksksks",
-      "gender": "1",
-      "birthday": "2022-07-10",
-      "idCard": "21123123123",
-      "phone": "0902123141",
-      "email": "zzzz@gmail.com",
-      "address": "quang tri",
-      "typeCustomer": {
-        "id": 2
-      }
-    },
-    {
-      "code": "KH-9182",
-      "name": "SasaS",
-      "gender": "2",
-      "birthday": "2022-07-14",
-      "idCard": "1321312313",
-      "phone": "0901234567",
-      "email": "dasda@gm",
-      "address": "sadads",
-      "typeCustomer": {
-        "id": 3
+        "id": 2,
+        "name": "normal"
       }
     }
   ],

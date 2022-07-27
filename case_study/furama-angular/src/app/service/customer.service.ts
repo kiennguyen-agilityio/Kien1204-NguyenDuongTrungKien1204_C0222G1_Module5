@@ -8,17 +8,31 @@ import {Observable} from 'rxjs';
 })
 export class CustomerService {
   private API_URL = 'http://localhost:3000/customerList';
+
   constructor(private http: HttpClient) {
   }
+
   getAll(): Observable<Customer[]> {
     return this.http.get<Customer[]>(this.API_URL);
   }
+
   addCustomer(customer): Observable<Customer> {
     return this.http.post<Customer>(this.API_URL, customer);
   }
-  updateCustomer() {
+
+  findById(id: number): Observable<Customer> {
+    return this.http.get<Customer>(this.API_URL + '/' + id);
   }
 
-  deleteCustomer() {
+  updateCustomer(id: number, customer: Customer): Observable<Customer> {
+    return this.http.patch<Customer>(this.API_URL + '/' + id, customer);
+
+  }
+
+  deleteCustomer(id: number ): Observable<Customer> {
+    return this.http.delete<Customer>(this.API_URL + '/' + id);
+  }
+  search(search: string): Observable<Customer[]> {
+    return this.http.get<Customer[]>(this.API_URL + '?name_like=' + search);
   }
 }

@@ -1,0 +1,93 @@
+{
+  "customerList": [
+    {
+      "id": 15,
+      "code": "KH-1234",
+      "name": "Duy Tran",
+      "gender": "1",
+      "birthday": "2022-07-02",
+      "idCard": "2131232131",
+      "phone": "0901213123",
+      "email": "aa@h",
+      "address": "asaaa",
+      "typeCustomer": {
+        "id": 3,
+        "name": "super vip"
+      }
+    },
+    {
+      "id": 16,
+      "code": "KH-1231",
+      "name": "Quoc",
+      "gender": "1",
+      "birthday": "2022-07-09",
+      "idCard": "2131232131",
+      "phone": "090123131231",
+      "email": "baba@gamiks",
+      "address": "00000000",
+      "typeCustomer": {
+        "id": 1,
+        "name": "vip"
+      }
+    },
+    {
+      "id": 17,
+      "code": "KH-1234",
+      "name": "Nguyen Duy",
+      "gender": "2",
+      "birthday": "2022-07-02",
+      "idCard": "2121312121",
+      "phone": "09012321312",
+      "email": "avc@gmail",
+      "address": "acv",
+      "typeCustomer": {
+        "id": 2,
+        "name": "normal"
+      }
+    },
+    {
+      "id": 19,
+      "code": "KH-7777",
+      "name": "aaaaaaaaaa",
+      "gender": "1",
+      "birthday": "2022-07-10",
+      "idCard": "324124131221",
+      "phone": "090222222222",
+      "email": "a@g",
+      "address": "asaaa",
+      "typeCustomer": {
+        "id": 1,
+        "name": "vip"
+      }
+    },
+    {
+      "id": 20,
+      "code": "KH-2222",
+      "name": "aaaa",
+      "gender": "1",
+      "birthday": "2022-07-03",
+      "idCard": "2131112331",
+      "phone": "09012132111",
+      "email": "a@g",
+      "address": "aaaa",
+      "typeCustomer": {
+        "id": 1,
+        "name": "vip"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "vip"
+    },
+    {
+      "id": 2,
+      "name": "normal"
+    },
+    {
+      "id": 3,
+      "name": "super vip"
+    }
+  ]
+}
