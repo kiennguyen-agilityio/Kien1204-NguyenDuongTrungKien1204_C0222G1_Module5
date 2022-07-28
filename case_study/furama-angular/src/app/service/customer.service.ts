@@ -26,7 +26,6 @@ export class CustomerService {
 
   updateCustomer(id: number, customer: Customer): Observable<Customer> {
     return this.http.patch<Customer>(this.API_URL + '/' + id, customer);
-
   }
 
   deleteCustomer(id: number ): Observable<Customer> {

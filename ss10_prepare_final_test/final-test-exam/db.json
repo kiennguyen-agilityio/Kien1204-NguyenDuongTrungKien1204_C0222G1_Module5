@@ -1,0 +1,80 @@
+{
+  "ticket": [
+    {
+      "id": 1,
+      "price": 1000,
+      "startPosition": "Ben xe phuong dong",
+      "endPosition": "Ben xe phuong tay",
+      "startDate": "2002-07-15",
+      "time": "10.pm",
+      "garage": {
+        "id": 1,
+        "name": "Phuong Dong"
+      },
+      "amount": 6
+    },
+    {
+      "id": 5,
+      "price": "12",
+      "startPosition": "aaaa",
+      "endPosition": "aaaa",
+      "startDate": "2022-07-08",
+      "time": "11221",
+      "amount": "12312",
+      "garage": {
+        "id": 1,
+        "name": "Phuong Dong"
+      }
+    },
+    {
+      "id": 6,
+      "price": "aaaa",
+      "startPosition": "aaaa",
+      "endPosition": "aaaaa",
+      "startDate": "2022-07-02",
+      "time": "22",
+      "amount": "122",
+      "garage": {
+        "id": 2,
+        "name": "Phuong Tay"
+      }
+    },
+    {
+      "id": 7,
+      "price": "121",
+      "startPosition": "áaaa",
+      "endPosition": "sâ",
+      "startDate": "2022-07-09",
+      "time": "2",
+      "amount": "09020222",
+      "garage": {
+        "id": 1,
+        "name": "Phuong Dong"
+      }
+    },
+    {
+      "id": 8,
+      "price": "",
+      "startPosition": "",
+      "endPosition": "",
+      "startDate": "",
+      "time": "",
+      "amount": "",
+      "garage": ""
+    }
+  ],
+  "garage": [
+    {
+      "id": 1,
+      "name": "Phuong Dong"
+    },
+    {
+      "id": 2,
+      "name": "Phuong Tay"
+    },
+    {
+      "id": 3,
+      "name": "Phuong Bac"
+    }
+  ]
+}

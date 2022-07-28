@@ -1,9 +1,14 @@
 <div class="d-flex flex-row justify-content-between mb-2">
-  <a class="btn btn-primary" routerLink="/add-customer"><i class="far fa-plus-square"></i> Thêm khách hàng</a>
+  <a class="btn btn-primary" routerLink="/add"><i class="far fa-plus-square"></i> Thêm Ve Xe</a>
   <div class="d-flex flex-row">
-    <input class="form-control mr-2" type="text" [(ngModel)]="searchValue" (change)="doSearch()" placeholder="Tìm kiếm">
-    <button class="btn btn-outline-primary btn-sm btn-search w-50" (click)="doSearch()">Tìm kiếm</button>
+    <input class="form-control mr-2" type="text" [(ngModel)]="searchValue" (change)="doSearch()" placeholder="Tìm kiếm Theo Diem di">
+    <button class="btn btn-outline-primary btn-sm btn-search w-50" (click)="doSearch()">Tìm kiếm Theo Diem di</button>
   </div>
+</div>
+
+<div class="d-flex flex-row">
+  <input class="form-control mr-2" type="text" [(ngModel)]="searchValue2" (change)="doSearch()" placeholder="Tìm kiếm">
+  <button class="btn btn-outline-primary btn-sm btn-search w-100" (click)="doSearch()">Tìm kiếm Theo Diem Den</button>
 </div>
 <table class="table table-bordered">
   <thead class="thead-dark">
@@ -22,7 +27,7 @@
     <th scope="col">Chỉnh sửa</th>
     <th scope="col">Xóa</th>
   </tr>
-  <tr *ngFor="let customer of customerList; index as i">
+  <tr *ngFor="let customer of customerList | paginate: {itemsPerPage: 2, currentPage: page, totalItems: totalLength }; index as i">
     <td>{{customer.id}}</td>
     <td>{{customer.code}}</td>
     <td>{{customer.name}}</td>
@@ -41,6 +46,7 @@
   </tr>
   </thead>
 </table>
+<pagination-controls (pageChange)="page = $event">...</pagination-controls>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

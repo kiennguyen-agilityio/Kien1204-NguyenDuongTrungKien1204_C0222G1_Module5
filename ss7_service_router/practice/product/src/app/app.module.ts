@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {CategoryAddNewComponent} from './category/category-add-new/category-add-new.component';
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

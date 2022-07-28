@@ -20,5 +20,4 @@ export class DetailCustomerComponent implements OnInit {
       this.customer = value;
     });
   }
-
 }

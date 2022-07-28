@@ -1,0 +1,89 @@
+<div class="container">
+  <form [formGroup]="ticketForm" novalidate>
+    <h1 class="justify-content-center"> Form Create </h1>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Gia Ve</label>
+        <input type="text" class="form-control" placeholder="Nhap so" formControlName="price">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.price.hasError('required')
+        && (ticketForm.controls.price.dirty || ticketForm.controls.price.touched)">
+            không được để trống
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>Diem Di</label>
+        <input type="text" class="form-control" placeholder="Abc" formControlName="startPosition">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.startPosition.hasError('required')
+        && (ticketForm.controls.startPosition.dirty || ticketForm.controls.startPosition.touched)">
+            không được để trống
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-4">
+        <label>Diem Den</label>
+        <input type="text" class="form-control" placeholder="Abc" formControlName="endPosition">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.endPosition.hasError('required')
+        && (ticketForm.controls.endPosition.dirty || ticketForm.controls.endPosition.touched)">
+            không được để trống
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-3">
+        <label>Ngay Khoi Hanh</label>
+        <input type="date" class="form-control" placeholder="DD/MM//YYyy" formControlName="startDate">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.startDate.hasError('required')
+        && (ticketForm.controls.startDate.dirty || ticketForm.controls.startDate.touched)">
+            không được để trống
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-3">
+        <label> Gio Khoi Hanh</label>
+        <input type="text" class="form-control" placeholder="Nhap so" formControlName="time">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.time.hasError('required')
+        && (ticketForm.controls.time.dirty || ticketForm.controls.time.touched)">
+            không được để trống
+          </div>
+
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <label> Nha Xe </label><br>
+        <select class="form-select form-select-lg mb-3 form form-control"
+                aria-label=".form-select-lg example" formControlName="id" id="garage">
+          <option *ngFor="let garage of garages" [value]="garage.id">{{garage.name}}</option>
+        </select>
+        <p style="color: red; font-size: 0.9rem" *ngIf="ticketForm.get('garage').get('id').touched
+                && ticketForm.get('garage').hasError('required', 'id')">* Customer type is required</p>
+      </div>
+      <div class="form-group col-md-3">
+        <label> So luong </label>
+        <input type="email" class="form-control" placeholder="090-1234567" formControlName="amount">
+        <div>
+
+          <div class="mb-3 text-danger" *ngIf="ticketForm.controls.amount.hasError('required')
+        && (ticketForm.controls.amount.dirty || ticketForm.controls.amount.touched)">
+            không được để trống
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="ticketForm.invalid"> Create</button>
+  </form>
+</div>
