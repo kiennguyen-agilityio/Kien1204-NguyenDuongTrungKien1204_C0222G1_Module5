@@ -35,4 +35,7 @@ export class TicketService {
     return this.http.get<Ticket[]>(this.API_URL + '?endPosition=' + search);
   }
 
+  deleteTicket(id: number ): Observable<Ticket> {
+    return this.http.delete<Ticket>(this.API_URL + '/' + id);
+  }
 }

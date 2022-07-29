@@ -38,29 +38,6 @@
         "id": 2,
         "name": "Phuong Tay"
       }
-    },
-    {
-      "id": 7,
-      "price": "121",
-      "startPosition": "áaaa",
-      "endPosition": "sâ",
-      "startDate": "2022-07-09",
-      "time": "2",
-      "amount": "09020222",
-      "garage": {
-        "id": 1,
-        "name": "Phuong Dong"
-      }
-    },
-    {
-      "id": 8,
-      "price": "",
-      "startPosition": "",
-      "endPosition": "",
-      "startDate": "",
-      "time": "",
-      "amount": "",
-      "garage": ""
     }
   ],
   "garage": [

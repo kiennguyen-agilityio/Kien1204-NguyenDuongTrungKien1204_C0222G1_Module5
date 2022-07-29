@@ -15,8 +15,6 @@ export class AddNewTicketComponent implements OnInit {
 
   ticketForm: FormGroup;
   garages: Garage[];
-  // tslint:disable-next-line:ban-types
-  private allTicket: Object;
   constructor(private ticketService: TicketService, private garageService: GarageService,
               private router: Router) { }
 
@@ -29,16 +27,14 @@ export class AddNewTicketComponent implements OnInit {
       endPosition: new FormControl('', Validators.required),
       startDate: new FormControl('', Validators.required),
       time: new FormControl('', Validators.required),
-      amount: new FormControl('', [Validators.required]),
-      garage: new FormGroup({
-        id: new FormControl('', Validators.required)
-      })
+      garage: new FormControl('', [Validators.required]),
+      amount: new FormControl('', [Validators.required])
     });
   }
   onSubmit() {
     console.log(this.ticketForm.value);
     this.ticketService.addNewTicket(this.ticketForm.value).subscribe(() => {
-      this.router.navigateByUrl('/customer');
+      this.router.navigateByUrl('/');
       this.ticketForm.reset();
     });
   }
@@ -46,7 +42,7 @@ export class AddNewTicketComponent implements OnInit {
   getGarages() {
     this.garageService.getAllGarages().subscribe(garages => {
       this.garages = garages;
+      console.log(this.garages);
     });
-    console.log(this.garages);
   }
 }

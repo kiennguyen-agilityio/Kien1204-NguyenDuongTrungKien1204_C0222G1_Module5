@@ -63,4 +63,15 @@ export class ListTicketComponent implements OnInit {
       (data) => this.listTicket = data
     );
   }
+  getAll() {
+    this.ticketService.getAllTicket().subscribe(ticketList => {
+      this.listTicket = ticketList;
+      this.totalLength = ticketList.length;
+    });
+  }
+  deleteTicket() {
+    this.ticketService.deleteTicket(this.bookingTicket.id).subscribe(result => {
+      this.getAll();
+    });
+  }
 }
