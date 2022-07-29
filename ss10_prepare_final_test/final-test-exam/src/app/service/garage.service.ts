@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class GarageService {
-  private API_URL = 'http://localhost:3000/garage';
+  private API_URL = 'http://localhost:8080/api/garage';
 
   constructor(private http: HttpClient) {
   }

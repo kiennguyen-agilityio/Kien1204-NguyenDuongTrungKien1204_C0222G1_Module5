@@ -1,7 +1,8 @@
 <div class="d-flex flex-row justify-content-between mb-2">
   <a class="btn btn-primary" routerLink="/add"><i class="far fa-plus-square"></i> Thêm khách hàng</a>
   <div class="d-flex flex-row">
-    <input class="form-control mr-2" type="text" [(ngModel)]="searchValue" (change)="doSearch()" placeholder="Tìm kiếm">
+    <input class="form-control mr-2" type="text" [(ngModel)]="startPosition" (change)="doSearch()" placeholder="nơi bắt đầu">
+    <input class="form-control mr-2" type="text" [(ngModel)]="endPosition" (change)="doSearch()" placeholder="nơi kết thúc">
     <button class="btn btn-outline-primary btn-sm btn-search w-50" (click)="doSearch()">Tìm kiếm</button>
   </div>
 </div>
@@ -18,7 +19,6 @@
     <th scope="col">Amount</th>
     <th scope="col">Booking</th>
     <th scope="col">Update</th>
-    <th scope="col"> Delete</th>
   </tr>
   <tr
     *ngFor="let ticket of listTicket | paginate: {itemsPerPage: 5, currentPage: page, totalItems: totalLength }; index as i">
@@ -37,7 +37,7 @@
               data-target="#exampleModal"> Dat Ve
       </button>
     </a></td>
-    <td><a routerLink="/edit-ticket/{{ticket.id}}"> Edit</a></td>
+<!--    <td><a routerLink="/edit-ticket/{{ticket.id}}"> Edit</a></td>-->
     <td><a routerLink="/ticket/{{ticket.id}}">
       <button type="button" class="btn badge-danger" (click)="setIdTicket(ticket.id)" data-toggle="modal"
               data-target="#exampleModal1"> Xoa

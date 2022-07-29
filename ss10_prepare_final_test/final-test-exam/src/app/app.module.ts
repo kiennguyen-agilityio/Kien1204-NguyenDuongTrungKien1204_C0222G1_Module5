@@ -11,14 +11,13 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {ListTicketComponent} from './ticket/list-ticket/list-ticket.component';
 import {AddNewTicketComponent} from './ticket/add-new-ticket/add-new-ticket.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
     ListTicketComponent,
-    AddNewTicketComponent
+    AddNewTicketComponent,
   ],
   imports: [
     BrowserModule,

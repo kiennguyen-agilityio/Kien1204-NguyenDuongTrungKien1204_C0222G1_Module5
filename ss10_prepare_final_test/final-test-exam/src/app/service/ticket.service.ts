@@ -8,15 +8,15 @@ import {Garage} from '../model/garage';
   providedIn: 'root'
 })
 export class TicketService {
-  private API_URL = 'http://localhost:3000/ticket';
+  private API_URL = 'http://localhost:8080/api/ticket';
 
   constructor(private http: HttpClient) {
   }
   getAllTicket(): Observable<Ticket[]> {
     return this.http.get<Ticket[]>(this.API_URL);
   }
-  addNewTicket(ticket): Observable<Ticket> {
-    return this.http.post<Ticket>(this.API_URL, ticket);
+  addNewTicket(ticket: Ticket): Observable<Ticket> {
+    return this.http.post<Ticket>(this.API_URL + '/save', ticket);
   }
 
   booking(ticket: Ticket ): Observable<Ticket> {
@@ -27,15 +27,12 @@ export class TicketService {
     return this.http.get<Ticket>(this.API_URL + '/' + id);
   }
 
-  searchByStartPosition(search: string): Observable<Ticket[]> {
-    return this.http.get<Ticket[]>(this.API_URL + '?startPosition_like=' + search);
-  }
-
-  searchByEndPosition(search: string): Observable<Ticket[]> {
-    return this.http.get<Ticket[]>(this.API_URL + '?endPosition=' + search);
+  search(startPosition: string, endPosition: string): Observable<Ticket[]> {
+    return this.http.get<Ticket[]>
+    (this.API_URL + `/search/${startPosition}&${endPosition}`);
   }
 
   deleteTicket(id: number ): Observable<Ticket> {
-    return this.http.delete<Ticket>(this.API_URL + '/' + id);
+    return this.http.delete<Ticket>(this.API_URL + '/delete/' + id);
   }
 }

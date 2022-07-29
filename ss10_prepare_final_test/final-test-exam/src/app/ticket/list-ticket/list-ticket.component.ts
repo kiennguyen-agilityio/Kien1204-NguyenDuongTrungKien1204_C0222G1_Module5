@@ -25,29 +25,27 @@ export class ListTicketComponent implements OnInit {
     },
     amount: 0,
   };
-  searchValue: string;
+  endPosition: string;
+  startPosition: string;
 
   constructor(private ticketService: TicketService, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.ticketService.getAllTicket().subscribe(value => {
-      this.listTicket = value;
-      // this.toastr.success('Loaded successfully!', 'Customer!');
-    }, error => {
-      console.log('error');
-    }, () => {
-      console.log('complete');
-    });
+    this.getAll();
   }
 
   BookingTicket() {
-    this.bookingTicket.amount -= 1;
-    this.ticketService.booking(this.bookingTicket).subscribe(result => {
-    }, error => {
-    }, () => {
-      this.ngOnInit();
-    });
+    if (this.bookingTicket.amount === 0) {
+      alert('hết vé');
+    } else {
+      this.bookingTicket.amount -= 1 ;
+      this.ticketService.booking(this.bookingTicket).subscribe(result => {
+      }, error => {
+      }, () => {
+        this.ngOnInit();
+      });
+    }
   }
 
   setIdTicket(id) {
@@ -58,17 +56,24 @@ export class ListTicketComponent implements OnInit {
   }
 
   doSearch() {
-    this.searchValue = this.searchValue.trim();
-    this.ticketService.searchByStartPosition(this.searchValue).subscribe(
-      (data) => this.listTicket = data
-    );
+    this.ticketService.search(this.startPosition, this.endPosition).subscribe((tickets: any) => {
+      if (tickets != null) {
+        this.listTicket = tickets.content;
+      } else {
+        this.listTicket = [];
+      }
+      this.page = 1;
+    });
   }
+
   getAll() {
     this.ticketService.getAllTicket().subscribe(ticketList => {
+      console.log(ticketList);
       this.listTicket = ticketList;
       this.totalLength = ticketList.length;
     });
   }
+
   deleteTicket() {
     this.ticketService.deleteTicket(this.bookingTicket.id).subscribe(result => {
       this.getAll();
