@@ -23,7 +23,7 @@ export class AddNewTicketComponent implements OnInit {
   ngOnInit(): void {
     this.getGarages();
     this.ticketForm = new FormGroup({
-      id: new FormControl(0),
+      id: new FormControl(),
       price: new FormControl('', [Validators.required]),
       startPosition: new FormControl('', [Validators.required]),
       endPosition: new FormControl('', Validators.required),

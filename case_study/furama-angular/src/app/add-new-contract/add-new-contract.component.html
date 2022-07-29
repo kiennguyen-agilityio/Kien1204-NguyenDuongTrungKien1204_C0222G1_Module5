@@ -1,30 +1,58 @@
-<div class="row" style="margin-bottom: 100px">
-  <img src="assets/img/Untitled.png" height="200" width="2000"/>
-</div>
+
 <div class="container">
-  <form>
+  <form  [formGroup]="contractForm" novalidate>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Contract Code</label>
-        <input type="email" class="form-control" placeholder="SV-1234">
+        <input type="email" class="form-control" placeholder="SV-1234" formControlName="id">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="contractForm.controls.id.hasError('required')
+        && (contractForm.controls.id.dirty || contractForm.controls.id.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Start Date</label>
-        <input type="text" class="form-control" placeholder="Villa">
+        <input type="text" class="form-control" placeholder="Villa" formControlName="startDate">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="contractForm.controls.startDate.hasError('required')
+        && (contractForm.controls.startDate.dirty || contractForm.controls.startDate.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>End Date </label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="endDate">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="contractForm.controls.endDate.hasError('required')
+        && (contractForm.controls.endDate.dirty || contractForm.controls.endDate.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Deposit</label>
-        <input type="email" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="deposit">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="contractForm.controls.deposit.hasError('required')
+        && (contractForm.controls.deposit.dirty || contractForm.controls.deposit.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Total Payment Amount</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="totalPayment">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="contractForm.controls.totalPayment.hasError('required')
+        && (contractForm.controls.totalPayment.dirty || contractForm.controls.totalPayment.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
     <button type="submit" class="btn btn-primary"> Create</button>

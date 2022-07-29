@@ -1,51 +1,106 @@
-<div class="row" style="margin-bottom: 100px">
-  <img src="assets/img/Untitled.png" height="200" width="2000"/>
-</div>
-<!--form edit-->
+<!--form create-->
 <div class="container">
-  <form>
+  <form [formGroup]="serviceEditForm" novalidate>
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label>Customer Code</label>
-        <input type="email" class="form-control" placeholder="SV-1234">
+        <label>Service Code</label>
+        <input type="email" class="form-control" placeholder="SV-1234" formControlName="id">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.id.hasError('required')
+        && (serviceEditForm.controls.id.dirty || serviceEditForm.controls.id.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label>Service Name</label>
-        <input type="text" class="form-control" placeholder="Villa">
+        <input type="text" class="form-control" placeholder="Villa" formControlName="name">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.name.hasError('required')
+        && (serviceEditForm.controls.name.dirty || serviceEditForm.controls.name.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label>Service Area</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="areaUse">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.areaUse.hasError('required')
+        && (serviceEditForm.controls.areaUse.dirty || serviceEditForm.controls.areaUse.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Service Cost</label>
-        <input type="email" class="form-control" placeholder="">
+        <input type="email" class="form-control" placeholder="" formControlName="cost">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.cost.hasError('required')
+        && (serviceEditForm.controls.cost.dirty || serviceEditForm.controls.cost.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Max People</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="maxPeople">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.maxPeople.hasError('required')
+        && (serviceEditForm.controls.maxPeople.dirty || serviceEditForm.controls.maxPeople.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Standard Room</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="standardRoom">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.standardRoom.hasError('required')
+        && (serviceEditForm.controls.standardRoom.dirty || serviceEditForm.controls.standardRoom.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Description Other Convenience </label>
-        <input type="email" class="form-control" placeholder="">
+        <input type="email" class="form-control" placeholder="" formControlName="description">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.description.hasError('required')
+        && (serviceEditForm.controls.description.dirty || serviceEditForm.controls.description.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label> Pool Area</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="poolArea">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.poolArea.hasError('required')
+        && (serviceEditForm.controls.poolArea.dirty || serviceEditForm.controls.poolArea.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label> Number Of Floor</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="numberOfFloor">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceEditForm.controls.numberOfFloor.hasError('required')
+        && (serviceEditForm.controls.numberOfFloor.dirty || serviceEditForm.controls.numberOfFloor.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary"> Edit </button>
+    <button type="submit" class="btn btn-primary"> Update</button>
   </form>
 </div>

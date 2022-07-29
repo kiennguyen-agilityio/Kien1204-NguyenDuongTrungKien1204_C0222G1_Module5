@@ -4,4 +4,9 @@ export interface Service {
   maxPeople: number;
   areaUse: number;
   view: string;
+  cost: string;
+  standardRoom: string;
+  poolArea: string;
+  description: string;
+  numberOfFloor: string;
 }

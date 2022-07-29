@@ -1,49 +1,104 @@
-<div class="row" style="margin-bottom: 100px">
-  <img src="bootstrap/bootstrap413/img/Untitled.png" height="200" width="2000"/>
-</div>
 <!--form create-->
 <div class="container">
-  <form>
+  <form [formGroup]="serviceForm" novalidate>
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Service Code</label>
-        <input type="email" class="form-control" placeholder="SV-1234">
+        <input type="email" class="form-control" placeholder="SV-1234" formControlName="id">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.id.hasError('required')
+        && (serviceForm.controls.id.dirty || serviceForm.controls.id.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label>Service Name</label>
-        <input type="text" class="form-control" placeholder="Villa">
+        <input type="text" class="form-control" placeholder="Villa" formControlName="name">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.name.hasError('required')
+        && (serviceForm.controls.name.dirty || serviceForm.controls.name.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
+
       <div class="form-group col-md-4">
         <label>Service Area</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="areaUse">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.areaUse.hasError('required')
+        && (serviceForm.controls.areaUse.dirty || serviceForm.controls.areaUse.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Service Cost</label>
-        <input type="email" class="form-control" placeholder="">
+        <input type="email" class="form-control" placeholder="" formControlName="cost">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.cost.hasError('required')
+        && (serviceForm.controls.cost.dirty || serviceForm.controls.cost.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Max People</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="maxPeople">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.maxPeople.hasError('required')
+        && (serviceForm.controls.maxPeople.dirty || serviceForm.controls.maxPeople.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label>Standard Room</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="standardRoom">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.standardRoom.hasError('required')
+        && (serviceForm.controls.standardRoom.dirty || serviceForm.controls.standardRoom.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="form-row">
       <div class="form-group col-md-4">
         <label>Description Other Convenience </label>
-        <input type="email" class="form-control" placeholder="">
+        <input type="email" class="form-control" placeholder="" formControlName="description">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.description.hasError('required')
+        && (serviceForm.controls.description.dirty || serviceForm.controls.description.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label> Pool Area</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="poolArea">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.poolArea.hasError('required')
+        && (serviceForm.controls.poolArea.dirty || serviceForm.controls.poolArea.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
       <div class="form-group col-md-4">
         <label> Number Of Floor</label>
-        <input type="text" class="form-control" placeholder="">
+        <input type="text" class="form-control" placeholder="" formControlName="numberOfFloor">
+        <div>
+          <div class="mb-3 text-danger" *ngIf="serviceForm.controls.numberOfFloor.hasError('required')
+        && (serviceForm.controls.numberOfFloor.dirty || serviceForm.controls.numberOfFloor.touched)">
+            không được để trống
+          </div>
+        </div>
       </div>
     </div>
     <button type="submit" class="btn btn-primary"> Create</button>
