@@ -11,6 +11,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {ListTicketComponent} from './ticket/list-ticket/list-ticket.component';
 import {AddNewTicketComponent} from './ticket/add-new-ticket/add-new-ticket.component';
+import { TestGameComponent } from './test-game/test-game.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import {AddNewTicketComponent} from './ticket/add-new-ticket/add-new-ticket.comp
     HeaderComponent,
     ListTicketComponent,
     AddNewTicketComponent,
+    TestGameComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import {AddNewTicketComponent} from './ticket/add-new-ticket/add-new-ticket.comp
     RouterModule,
     NgxPaginationModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
